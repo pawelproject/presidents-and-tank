@@ -1,0 +1,74 @@
+###
+POST http://localhost:4000/users/signup
+Content-Type:  application/json
+
+{
+    "email":"test@test.pl",
+    "password": "test",
+    "fullName": "Donald Trump",
+    "country": "USA",
+    "hasNuclearBomb": "true"
+}
+
+
+###
+POST http://localhost:4000/users/signin
+Content-Type:  application/json
+
+{
+    "email":"test@test.pl",
+    "password": "aaaa1;"
+}
+
+###
+POST http://localhost:4000/tanks/create
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5wbCIsImZ1bGxOYW1lIjoiSm9lIEJpZGVuIiwiY291bnRyeSI6IlVTQSIsImhhc051Y2xlYXJCb21iIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTE2VDE5OjQ2OjE1LjA2MVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTE2VDIwOjQ2OjMyLjgzM1oiLCJpZCI6IjYyNWIxZDA2NmUwYzBmYjlmNTQ1MTI0MCIsImlhdCI6MTY1MDE0MjU4OCwiZXhwIjoxNjUwMTg1Nzg4fQ.LEX_PzZtyHF9gqseBgae0E1jh95JQhHonjjhuypNepM
+
+{
+    "nr": "Dssasd200",
+    "producer": "General Dynamics",
+    "model": "Abrams",
+    "version": "SEP v3",
+    "tankYear": 2012,
+    "releaseDate": "2021-04-17",
+    "mileage": 2000,
+    "ammo": 60,
+    "armor": 300
+}
+
+###
+Get http://localhost:4000/tanks/
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5wbCIsImZ1bGxOYW1lIjoiSm9lIEJpZGVuIiwiY291bnRyeSI6IlVTQSIsImhhc051Y2xlYXJCb21iIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTE2VDE5OjQ2OjE1LjA2MVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTE2VDIwOjQ2OjMyLjgzM1oiLCJpZCI6IjYyNWIxZDA2NmUwYzBmYjlmNTQ1MTI0MCIsImlhdCI6MTY1MDE0MjU4OCwiZXhwIjoxNjUwMTg1Nzg4fQ.LEX_PzZtyHF9gqseBgae0E1jh95JQhHonjjhuypNepM
+
+
+
+###
+Get http://localhost:4000/tanks/6258374dc4662d5971cc8570s
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjU4MzcyY2M0NjYyZDU5NzFjYzg1NmEiLCJlbWFpbCI6InRlc3RAdGVzdC5wbCIsImZ1bGxOYW1lIjoiVmxhZGR5IFB1dGluIiwiY291bnRyeSI6IlJ1c3NpYSIsImhhc051Y2xlYXJCb21iIjp0cnVlLCJ0YW5rcyI6WyI2MjU4Mzc0ZGM0NjYyZDU5NzFjYzg1NzAiLCI2MjU5NDdlMDIzYTA2NDFmOTdmY2UxNzYiXSwiY3JlYXRlZEF0IjoiMjAyMi0wNC0xNFQxNTowMTowMC4wNzJaIiwidXBkYXRlZEF0IjoiMjAyMi0wNC0xNVQxMDoyNDozMi45MTVaIiwiaWF0IjoxNjUwMDIxMDk0LCJleHAiOjE2NTAwNjQyOTR9.MQsJjfl8Bt7Ju3tsHF2WHLrDGS3cN-98_w4Dj_LRQdo
+
+
+###
+DELETE http://localhost:4000/tanks/6258374dc4662d5971cc8570s
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5wbCIsImZ1bGxOYW1lIjoiVmxhZGR5IFB1dGluIiwiY291bnRyeSI6IlJ1c3NpYSIsImhhc051Y2xlYXJCb21iIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTE0VDE1OjAxOjAwLjA3MloiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTE1VDE5OjI3OjIwLjQ2NloiLCJpZCI6IjYyNTgzNzJjYzQ2NjJkNTk3MWNjODU2YSIsImlhdCI6MTY1MDEwODM0MSwiZXhwIjoxNjUwMTUxNTQxfQ.3YFnoYjl1qnPmSH9j73uOuoxzvxCKSMRM25XG6SqRIs
+
+
+###
+PUT http://localhost:4000/tanks/625b2a9100c9a1edd3e5c968
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5wbCIsImZ1bGxOYW1lIjoiSm9lIEJpZGVuIiwiY291bnRyeSI6IlVTQSIsImhhc051Y2xlYXJCb21iIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTA0LTE2VDE5OjQ2OjE1LjA2MVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA0LTE2VDIwOjQ2OjMyLjgzM1oiLCJpZCI6IjYyNWIxZDA2NmUwYzBmYjlmNTQ1MTI0MCIsImlhdCI6MTY1MDE0MjU4OCwiZXhwIjoxNjUwMTg1Nzg4fQ.LEX_PzZtyHF9gqseBgae0E1jh95JQhHonjjhuypNepM
+
+{
+    "nr": "BIGOS",
+    "producer": "General Dynamics",
+    "model": "Abrams",
+    "version": "SEP v3",
+    "tankYear": 2012,
+    "releaseDate": "1971-07-15",
+    "mileage": 2000,
+    "ammo": 60,
+    "armor": 300
+}
