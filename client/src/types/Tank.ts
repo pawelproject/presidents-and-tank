@@ -13,4 +13,6 @@ export interface Tank extends TankListItem {
   ammo: number | string;
   armor: number | string;
   ownerId?: string;
+  updatedAt?: Date;
+  createdAt?: Date;
 }

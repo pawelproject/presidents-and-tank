@@ -85,6 +85,14 @@ export const TankDetails: FC<ITankDetailsProps> = ({ tank }) => {
                 <td>Armor</td>
                 <td>{tank.armor.toString()}</td>
               </tr>
+              <tr>
+                <td>Last updated at</td>
+                <td>{tank?.updatedAt?.toLocaleString()}</td>
+              </tr>
+              <tr>
+                <td>Created At</td>
+                <td>{tank?.createdAt?.toLocaleString()}</td>
+              </tr>
             </tbody>
           </Table>
           <Row>

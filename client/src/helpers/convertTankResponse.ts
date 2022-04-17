@@ -12,6 +12,8 @@ export const convertTankResponse = (responseData: any) => {
     ammo,
     armor,
     ownerId,
+    updatedAt,
+    createdAt,
   } = responseData;
 
   const userData: Tank = {
@@ -26,6 +28,8 @@ export const convertTankResponse = (responseData: any) => {
     ammo,
     armor,
     ownerId,
+    updatedAt: new Date(updatedAt),
+    createdAt: new Date(updatedAt),
   };
 
   return userData;
