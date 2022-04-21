@@ -29,7 +29,7 @@ export const convertTankResponse = (responseData: any) => {
     armor,
     ownerId,
     updatedAt: new Date(updatedAt),
-    createdAt: new Date(updatedAt),
+    createdAt: new Date(createdAt),
   };
 
   return userData;
