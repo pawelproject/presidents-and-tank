@@ -15,6 +15,9 @@ export const tanksApi = createApi({
       return headers;
     },
   }),
+  refetchOnMountOrArgChange: true,
+  refetchOnFocus: true,
+  refetchOnReconnect: true,
   endpoints: (builder) => ({
     getTanks: builder.query({
       query: () => "",
