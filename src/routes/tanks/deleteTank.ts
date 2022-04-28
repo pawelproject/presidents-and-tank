@@ -8,17 +8,13 @@ router.delete(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const tank = await Tank.findOne({ _id: req.params.id });
-      if (!tank) {
-        return res
-          .status(404)
-          .json({ message: "There is no tank with that id" });
+      if (tank) {
+        if (tank?.ownerId.toString() !== req.user.id) {
+          return res.sendStatus(403);
+        }
+        await tank?.remove();
       }
 
-      if (tank?.ownerId.toString() !== req.user.id) {
-        return res.sendStatus(403);
-      }
-
-      await tank?.remove();
       return res.sendStatus(204);
     } catch (err) {
       res.sendStatus(500);
